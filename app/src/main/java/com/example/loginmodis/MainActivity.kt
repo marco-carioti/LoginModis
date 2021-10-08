@@ -25,7 +25,13 @@ class MainActivity : AppCompatActivity() {
                 }
                 var username1 = "Marco"
                 var password1 = "123"
-                if(username1.equals(binding.username.text.toString())&&(password1.equals(binding.password.text.toString()))) {
+                var username2= "Chicco"
+                var password2 = "321"
+                var username3 = "Ciccio"
+                var password3 ="10"
+                if(username1.equals(binding.username.text.toString())&&(password1.equals(binding.password.text.toString()))
+                    ||username2.equals(binding.username.text.toString())&&(password2.equals(binding.password.text.toString()))
+                    ||username3.equals(binding.username.text.toString())&&(password3.equals(binding.password.text.toString()))) {
                     startActivity(intent1)
                 }else(Toast.makeText(this,"Username o Password errati", Toast.LENGTH_LONG).show())
             }
