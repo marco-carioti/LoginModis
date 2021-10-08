@@ -10,5 +10,8 @@ class Activity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= Activity2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        var extras = intent.extras
+        var username = extras?.getString("username_inserita")
+        binding.tuausername.text = "Ciao $username, login effettuato con successo"
     }
 }

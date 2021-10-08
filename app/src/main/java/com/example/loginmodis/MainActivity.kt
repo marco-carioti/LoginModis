@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         }
         fun onButtonClick(){
             binding.button.setOnClickListener{
-                val intent1 = Intent(this,Activity2::class.java)
+                val intent1 = Intent(this,Activity2::class.java).apply {
+                    putExtra("username_inserita", binding.username.text.toString())
+                }
                 var username1 = "Marco"
                 var password1 = "123"
                 if(username1.equals(binding.username.text.toString())&&(password1.equals(binding.password.text.toString()))) {
